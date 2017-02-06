@@ -40,10 +40,6 @@ if ($p > $data['count']) {
     $data['content'] = '<h1>Выбранной страницы не существует</h1>';
 }
 
-print_r($data);
-
-exit;
-
 ?>
 
 
