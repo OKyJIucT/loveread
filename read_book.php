@@ -27,7 +27,7 @@ if ($p == 1) {
     $prev_class = '';
     $next_class = 'disabled';
 
-} else { // для всех остальных
+} else { // РґР»СЏ РІСЃРµС… РѕСЃС‚Р°Р»СЊРЅС‹С…
 
     $prev_href = 'read_book.php?id=' . $id . '&p=' . ($p - 1);
     $next_href = 'read_book.php?id=' . $id . '&p=' . ($p + 1);
@@ -37,7 +37,7 @@ if ($p == 1) {
 }
 
 if ($p > $data['count']) {
-    $data['content'] = '<h1>Выбранной страницы не существует</h1>';
+    $data['content'] = '<h1>Р’С‹Р±СЂР°РЅРЅРѕР№ СЃС‚СЂР°РЅРёС†С‹ РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚</h1>';
 }
 
 ?>
@@ -46,7 +46,7 @@ if ($p > $data['count']) {
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="windows-1251">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title><?= $data['title']; ?></title>
@@ -60,14 +60,14 @@ if ($p > $data['count']) {
             <div class="header clearfix">
                 <a href="<?= $url; ?>"<h4><?= $data['title']; ?></h4></a>
             </div>
-            <div class="pull-left"><strong>Страница <?= $_GET['p']; ?> из <?= $data['count']; ?></strong></div>
+            <div class="pull-left"><strong>РЎС‚СЂР°РЅРёС†Р° <?= $_GET['p']; ?> РёР· <?= $data['count']; ?></strong></div>
             <form class="form-inline pull-right" action="/read_book.php?id=60285&amp;p=46" method="get">
                 <div class="form-group">
                     <div class="input-group pull-left mr8">
-                        <input type="text" class="form-control" placeholder="Страница" name="p" style="width: 100px;">
+                        <input type="text" class="form-control" placeholder="РЎС‚СЂР°РЅРёС†Р°" name="p" style="width: 100px;">
                     </div>
                     <input type="hidden" name="id" value="<?= $id; ?>"/>
-                    <button type="submit" class="btn btn-default">Перейти</button>
+                    <button type="submit" class="btn btn-default">РџРµСЂРµР№С‚Рё</button>
                 </div>
             </form>
             <div class="clearfix"></div>
@@ -76,17 +76,17 @@ if ($p > $data['count']) {
                     <?= $data['content']; ?>
                 </div>
             </div>
-            <a href="<?= $prev_href; ?>" class="btn btn-default btn-lg col-xs-12 mb20 <?= $prev_class; ?>">Назад</a>
-            <a href="<?= $next_href; ?>" class="btn btn-default btn-lg col-xs-12 mb20 <?= $next_class; ?>">Вперед</a>
+            <a href="<?= $prev_href; ?>" class="btn btn-default btn-lg col-xs-12 mb20 <?= $prev_class; ?>">РќР°Р·Р°Рґ</a>
+            <a href="<?= $next_href; ?>" class="btn btn-default btn-lg col-xs-12 mb20 <?= $next_class; ?>">Р’РїРµСЂРµРґ</a>
             <footer class="footer">
-                <div class="pull-left"><strong>Страница <?= $_GET['p']; ?> из <?= $data['count']; ?></strong></div>
+                <div class="pull-left"><strong>РЎС‚СЂР°РЅРёС†Р° <?= $_GET['p']; ?> РёР· <?= $data['count']; ?></strong></div>
                 <form class="form-inline pull-right" action="/read_book.php?id=60285&amp;p=46" method="get">
                     <div class="form-group">
                         <div class="input-group pull-left mr8">
-                            <input type="text" class="form-control" placeholder="Страница" name="p" style="width: 100px;">
+                            <input type="text" class="form-control" placeholder="РЎС‚СЂР°РЅРёС†Р°" name="p" style="width: 100px;">
                         </div>
                         <input type="hidden" name="id" value="<?= $id; ?>"/>
-                        <button type="submit" class="btn btn-default">Перейти</button>
+                        <button type="submit" class="btn btn-default">РџРµСЂРµР№С‚Рё</button>
                     </div>
                 </form>
             </footer>
