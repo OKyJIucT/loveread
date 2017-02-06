@@ -60,7 +60,7 @@ if ($p > $data['count']) {
                 <a href="<?= $url; ?>"<h4><?= $data['title']; ?></h4></a>
             </div>
             <div class="pull-left"><strong>Страница <?= $_GET['p']; ?> из <?= $data['count']; ?></strong></div>
-            <form class="form-inline pull-right" action="/read_book.php?id=60285&amp;p=46" method="get">
+            <form class="form-inline pull-right" action="/read_book.php?id=<?= $id; ?>&p=<?= $p; ?>" method="get">
                 <div class="form-group">
                     <div class="input-group pull-left mr8">
                         <input type="text" class="form-control" placeholder="Страница" name="p" style="width: 100px;">

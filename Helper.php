@@ -65,8 +65,8 @@ class Helper
             $count = $pages[($i - 2)];
         }
 
-//        $content = iconv("windows-1251", "utf-8", $content);
-//        $title = iconv("windows-1251", "utf-8", $title);
+        $content = iconv("windows-1251", "utf-8", $content);
+        $title = iconv("windows-1251", "utf-8", $title);
 
         $result = [
             'content' => $content,
